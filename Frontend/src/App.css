@@ -1,0 +1,204 @@
+/* * {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+}
+
+
+main .right {
+  background-color: black;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background-color: #0d1117;
+  color: #e6edf3;
+  overflow: hidden;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.2rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgba(22, 27, 34, 0.9);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+/* ✅ Required for .review button to position correctly */
+main .left {
+  position: relative;
+}
+
+main .left:hover,
+main .right:hover {
+  box-shadow: 0 0 0 1px #3b82f6, 0 10px 35px rgba(59, 130, 246, 0.15);
+}
+
+.code {
+  flex: 1;
+  background-color: #1e1e2f;
+  color: #d4d4d4;
+  padding: 1rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  border-radius: 1rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+/* ✅ Review Button (modern, stays in left panel) */
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  border: none;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+  background-image: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+.left .review:hover {
+  background: linear-gradient(145deg, #818cf8, #6366f1);
+  transform: scale(1.05);
+}
+
+/* Right Panel (AI Output) */
+main .right {
+  padding: 2rem;
+  font-size: 1rem;
+  color: #e2e8f0;
+  overflow: auto;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+main .right code {
+  background-color: #272c36;
+  color: #a3e635;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b3b3b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    flex-basis: 100%;
+  }
+
+  .left .review {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
