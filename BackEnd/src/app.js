@@ -4,7 +4,11 @@ const cors = require('cors')
 
 const app = express()
 
-app.use(cors())
+app.use(cors({
+  origin: 'https://aipoweredcodereviewer-frontend.onrender.com',
+  credentials: true  // Optional, only if you're using cookies or auth headers
+}))
+
 
 
 app.use(express.json())
