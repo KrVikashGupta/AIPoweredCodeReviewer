@@ -52,7 +52,7 @@ An **advanced, full-stack AI-driven code review system** built using the **MERN 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-powered-code-reviewer.git
+git clone https://github.com/KrVikashGupta/ai-powered-code-reviewer.git
 cd ai-powered-code-reviewer
 ```
 
