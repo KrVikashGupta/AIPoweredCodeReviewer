@@ -1,6 +1,6 @@
 # 🚀 AI-Powered Code Reviewer
 
-A**advanced, full-stack AI-driven code review system** built using the **MERN stack (MongoDB, Express.js, React.js, Node.js)**, designed to **revolutionize the code review process**. By integrating **Gemini 2.0 Flash through the Gemini Developer API**, this tool allows developers to receive **instant, structured, and actionable feedback** on their code for better readability, performance, and maintainability.
+A **advanced, full-stack AI-driven code review system** built using the **MERN stack (MongoDB, Express.js, React.js, Node.js)**, designed to **revolutionize the code review process**. By integrating **Gemini 2.0 Flash through the Gemini Developer API**, this tool allows developers to receive **instant, structured, and actionable feedback** on their code for better readability, performance, and maintainability.
 
 🌐 **Live Demo:** [aipoweredcodereviewer-frontend.onrender.com](https://aipoweredcodereviewer-frontend.onrender.com/)
 
